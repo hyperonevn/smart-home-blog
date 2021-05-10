@@ -5,7 +5,7 @@ const BLOG = {
   link: 'https://blog-effect.vercel.app',
   description: 'This gonna be an awesome website.',
   lang: 'zh-CN',
-  appearance: 'dark', // ['light', 'dark', 'auto'],
+  appearance: 'auto', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
   lightBackground: '#ffffff', // use hex value, don't forget '#' e.g #fffefc
   darkBackground: '#111827', // use hex value, don't forget '#'
@@ -13,7 +13,7 @@ const BLOG = {
   since: 2021, // if leave this empty, current year will be used.
   postsPerPage: 7,
   sortByDate: false,
-  showAbout: false, // WIP
+  showAbout: true, // WIP
   showArchive: true, // WIP
   socialLink: 'https://github.com/joureliu',
   seo: {
