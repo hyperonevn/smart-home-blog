@@ -15,7 +15,7 @@ const BLOG = {
   sortByDate: false,
   showAbout: true, // WIP
   showArchive: true, // WIP
-  socialLink: 'https://github.com/joureliu',
+  socialLink: 'https://github.com/nullparam',
   autoCollapsedNavBar: false, // the automatically collapsed navigation bar
   seo: {
     keywords: ['Blog', 'Website', 'Notion'],
