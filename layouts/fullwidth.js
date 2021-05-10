@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Container from '@/components/Container'
+import TagItem from '@/components/TagItem'
 import { useRouter } from 'next/router'
 import { NotionRenderer, Equation, Code, CollectionRow } from 'react-notion-x'
 import BLOG from '@/blog.config'
@@ -14,14 +15,27 @@ const GitalkComponent = dynamic(
   },
   { ssr: false }
 )
+const UtterancesComponent = dynamic(
+  () => {
+    return import('@/components/Utterances')
+  },
+  { ssr: false }
+)
+const CusdisComponent = dynamic(
+  () => {
+    return import('react-cusdis').then(m => m.ReactCusdis)
+  },
+  { ssr: false }
+)
 
 const mapPageUrl = id => {
   return 'https://www.notion.so/' + id.replace(/-/g, '')
 }
 
-const FullWidthLayout = ({ children, blockMap, frontMatter }) => {
+const FullWidthLayout = ({ children, blockMap, frontMatter, emailHash }) => {
   const locale = useLocale()
   const router = useRouter()
+  const cusdisI18n = ['zh-cn', 'es', 'tr', 'pt-BR', 'oc']
   return (
     <Container
       layout="blog"
@@ -35,39 +49,31 @@ const FullWidthLayout = ({ children, blockMap, frontMatter }) => {
         <h1 className="font-bold text-3xl text-black dark:text-white">
           {frontMatter.title}
         </h1>
-        {frontMatter.type !== 'Page' && (
-          <nav className="flex mt-7 mb-2 items-center text-gray-500 dark:text-gray-400">
-            <div className="flex">
+        {frontMatter.type[0] !== 'Page' && (
+          <nav className="flex mt-7 items-start text-gray-500 dark:text-gray-400">
+            <div className="flex mb-4">
               <a href={BLOG.socialLink || '#'} className="flex">
                 <Image
                   alt={BLOG.author}
                   width={24}
                   height={24}
-                  src="/avatar.svg"
+                  src={`https://gravatar.com/avatar/${emailHash}`}
                   className="rounded-full"
                 />
-                <p className="hidden md:ml-2 md:block">{BLOG.author}</p>
+                <p className="ml-2 md:block">{BLOG.author}</p>
               </a>
-              <span className="hidden md:inline">&nbsp;/&nbsp;</span>
+              <span className="block">&nbsp;/&nbsp;</span>
             </div>
-            <div className="mx-2 md:ml-0">
+            <div className="mr-2 mb-4 md:ml-0">
               {formatDate(
-                frontMatter.start_date || frontMatter.createdTime,
+                frontMatter?.date?.start_date || frontMatter.createdTime,
                 BLOG.lang
               )}
             </div>
             {frontMatter.tags && (
-              <div className="flex flex-wrap">
+              <div className="flex flex-nowrap max-w-full overflow-x-auto article-tags">
                 {frontMatter.tags.map(tag => (
-                  <p
-                    key={tag}
-                    className="mr-1 cursor-pointer"
-                    onClick={() =>
-                      router.push(`/tag/${encodeURIComponent(tag)}`)
-                    }
-                  >
-                    #{tag}
-                  </p>
+                  <TagItem key={tag} tag={tag} />
                 ))}
               </div>
             )}
@@ -75,7 +81,7 @@ const FullWidthLayout = ({ children, blockMap, frontMatter }) => {
         )}
         {children}
         {blockMap && (
-          <div className="">
+          <div className="-mt-4">
             <NotionRenderer
               recordMap={blockMap}
               components={{
@@ -88,16 +94,16 @@ const FullWidthLayout = ({ children, blockMap, frontMatter }) => {
           </div>
         )}
       </article>
-      <div className="flex justify-between font-medium text-black dark:text-gray-100">
+      <div className="flex justify-between font-medium text-gray-500 dark:text-gray-400">
         <button
           onClick={() => router.push(BLOG.path || '/')}
-          className="mt-2 cursor-pointer"
+          className="mt-2 cursor-pointer hover:text-black dark:hover:text-gray-100"
         >
           ← {locale.POST.BACK}
         </button>
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="mt-2 cursor-pointer"
+          className="mt-2 cursor-pointer hover:text-black dark:hover:text-gray-100"
         >
           ↑ {locale.POST.TOP}
         </button>
@@ -114,6 +120,24 @@ const FullWidthLayout = ({ children, blockMap, frontMatter }) => {
             admin: BLOG.comment.gitalkConfig.admin,
             distractionFreeMode: BLOG.comment.gitalkConfig.distractionFreeMode
           }}
+        />
+      )}
+      {BLOG.comment && BLOG.comment.provider === 'utterances' && (
+        <UtterancesComponent issueTerm={frontMatter.id} layout="fullWidth" />
+      )}
+      {BLOG.comment && BLOG.comment.provider === 'cusdis' && (
+        <CusdisComponent
+          attrs={{
+            host: BLOG.comment.cusdisConfig.host,
+            appId: BLOG.comment.cusdisConfig.appId,
+            pageId: frontMatter.id,
+            pageTitle: frontMatter.title,
+            pageUrl: BLOG.link + router.asPath,
+            theme: BLOG.appearance
+          }}
+          lang={cusdisI18n.find(
+            i => i.toLowerCase() === BLOG.lang.toLowerCase()
+          )}
         />
       )}
     </Container>
