@@ -2,7 +2,7 @@ const BLOG = {
   title: 'GALAXY',
   author: 'Johnny',
   email: 'scrbiubiu@gmail.com',
-  link: 'https://blog-effect.vercel.app',
+  link: 'https://brownie.vercel.app',
   description: 'This gonna be an awesome website.',
   lang: 'zh-CN',
   appearance: 'auto', // ['light', 'dark', 'auto'],
