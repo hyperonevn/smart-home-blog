@@ -1,6 +1,6 @@
 const BLOG = {
-  title: 'XZDDF',
-  author: 'X',
+  title: 'XZDDF｜写字的地方',
+  author: 'xzddf',
   email: 'xzddfcom@gmail.com',
   link: 'https://xzddf.com',
   description: '七年公众号作者，数字游民，野生开发者',
