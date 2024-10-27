@@ -10,7 +10,7 @@ const NavBar = () => {
   const locale = useLocale()
   const links = [
     { id: 0, name:'Youtube', to: 'https://youtube.com/@xzddf', show: true },
-    { id: 1, name:'Twitter', to: 'https://x.com/xzddfcom', show: true },
+    { id: 1, name:'X', to: 'https://x.com/xzddfcom', show: true },
     { id: 2, name:'Telegram', to: 'https://t.me/xzddfcom', show: true },
     
     { id: 3, name: locale.NAV.SEARCH, to: '/search', show: true }
