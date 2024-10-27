@@ -9,10 +9,11 @@ const NavBar = () => {
   const BLOG = useConfig()
   const locale = useLocale()
   const links = [
-    { id: 0, name:'Youtube', to: 'https://youtube.com/@xzddf', show: true },
-    { id: 1, name:'Telegram', to: 'https://t.me/xzddfcom', show: true },
+    { id: 0, name:'YT', to: 'https://youtube.com/@xzddf', show: true },
+    { id: 1, name:'X', to: 'https://x.com/xzddfcom', show: true },
+    { id: 2, name:'TG', to: 'https://t.me/xzddfcom', show: true },
     
-    { id: 2, name: locale.NAV.SEARCH, to: '/search', show: true }
+    { id: 3, name: locale.NAV.SEARCH, to: '/search', show: true }
   ]
   return (
     <div className="flex-shrink-0">
