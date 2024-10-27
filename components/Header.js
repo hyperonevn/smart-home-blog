@@ -9,9 +9,10 @@ const NavBar = () => {
   const BLOG = useConfig()
   const locale = useLocale()
   const links = [
-    // { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
-   // { id: 1, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
-    { id: 2, name: locale.NAV.RSS, to: '/feed', show: true, external: true },
+    { id: 0, name: Youtube, to: 'https://youtube.com/@xzddf', show: true },
+    { id: 1, name: Twitter, to: 'https://x.com/xzddfcom', show: true },
+    { id: 2, name: Telegram, to: 'https://t.me/xzddfcom', show: true },
+    
     { id: 3, name: locale.NAV.SEARCH, to: '/search', show: true }
   ]
   return (
