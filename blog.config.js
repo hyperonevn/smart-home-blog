@@ -14,11 +14,11 @@ const BLOG = {
   since: 2019, // If leave this empty, current year will be used.
   postsPerPage: 7,
   sortByDate: false,
-  showAbout: true,
-  showArchive: true,
+  showAbout: false,
+  showArchive: false,
   autoCollapsedNavBar: false, // The automatically collapsed navigation bar
   ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // The link to generate OG image, don't end with a slash
-  socialLink: 'https://twitter.com/craigaryhart',
+  socialLink: '',
   seo: {
     keywords: ['xzddf', '写字的地方', 'xzddfcom'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
@@ -33,7 +33,7 @@ const BLOG = {
       domainId: '' // e.g '0e2257a8-54d4-4847-91a1-0311ea48cc7b'
     },
     gaConfig: {
-      measurementId: '' // e.g: G-XXXXXXXXXX
+      measurementId: 'G-EV64ESQ5E5' // e.g: G-XXXXXXXXXX
     }
   },
   comment: {
