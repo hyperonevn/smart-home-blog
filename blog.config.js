@@ -1,7 +1,7 @@
 const BLOG = {
   title: 'XZDDF',
   author: 'xzddf',
-  email: 'xzddfcom@gmail.com',
+  email: 'xzddf@duck.com',
   link: 'https://xzddf.com',
   description: '七年公众号作者，数字游民，野生开发者',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
