@@ -1,5 +1,5 @@
 const BLOG = {
-  title: 'XZDDF',
+  title: '写字的地方',
   author: 'xzddf',
   email: 'xzddf@duck.com',
   link: 'https://xzddf.com',
