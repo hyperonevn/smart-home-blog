@@ -13,7 +13,7 @@ const NavBar = () => {
     { id: 1, name:'X', to: 'https://x.com/xzddfcom', show: false },
     { id: 2, name:'TG', to: 'https://t.me/xzddfcom', show: false },
     
-    { id: 3, name: locale.NAV.RSS, to: '/feed', show: true, external: false },
+    { id: 3, name: locale.NAV.RSS, to: '/feed', show: false, external: true },
     { id: 4, name: locale.NAV.SEARCH, to: '/search', show: true }
   ]
   return (
