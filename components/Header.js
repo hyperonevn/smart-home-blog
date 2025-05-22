@@ -9,7 +9,7 @@ const NavBar = () => {
   const BLOG = useConfig()
   const locale = useLocale()
   const links = [
-    { id: 0, name:'YouTube', to: 'https://youtube.com/@yinomad', show: true },
+    { id: 0, name:'YouTube', to: 'https://youtube.com/@xzddf', show: false },
     { id: 1, name:'X', to: 'https://x.com/xzddfcom', show: true },
     { id: 2, name:'TG', to: 'https://t.me/xzddfcom', show: false },
     
