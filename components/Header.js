@@ -14,7 +14,8 @@ const NavBar = () => {
     { id: 2, name:'TG', to: 'https://t.me/xzddfcom', show: false },
     
     { id: 3, name: locale.NAV.RSS, to: '/feed', show: false, external: true },
-    { id: 4, name: locale.NAV.SEARCH, to: '/search', show: true }
+    { id: 4, name:'搜索', to: '/search', show: true }
+    //{ id: 4, name: locale.NAV.SEARCH, to: '/search', show: true }
   ]
   return (
     <div className="flex-shrink-0">
