@@ -11,11 +11,12 @@ const NavBar = () => {
   const links = [
     { id: 0, name:'YouTube', to: 'https://youtube.com/@xzddf', show: false },
     { id: 1, name:'X（Twitter）', to: 'https://x.com/xzddfcom', show: true },
-    { id: 2, name:'TG', to: 'https://t.me/xzddfcom', show: false },
+    { id: 2, name:'TG', to: 'https://t.me/xzddfcom', show: true },
+    { id: 3, name:'Email', to: 'mailto:xzddf@duck.com', show: true },
     
-    { id: 3, name: locale.NAV.RSS, to: '/feed', show: false, external: true },
-    { id: 4, name:'搜索', to: '/search', show: true }
-    //{ id: 4, name: locale.NAV.SEARCH, to: '/search', show: true }
+    { id: 4, name: locale.NAV.RSS, to: '/feed', show: false, external: true },
+    { id: 5, name:'搜索', to: '/search', show: true }
+    //{ id: 5, name: locale.NAV.SEARCH, to: '/search', show: true }
   ]
   return (
     <div className="flex-shrink-0">
