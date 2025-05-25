@@ -10,7 +10,7 @@ const NavBar = () => {
   const locale = useLocale()
   const links = [
     { id: 0, name:'YouTube', to: 'https://youtube.com/@xzddf', show: false },
-    { id: 1, name:'X（Twitter）', to: 'https://x.com/xzddfcom', show: true },
+    { id: 1, name:'X（Twitter）', to: 'https://x.com/laozeieth', show: true },
     { id: 2, name:'频道', to: 'https://t.me/xzddfcom', show: false },
     { id: 3, name:'联系', to: 'mailto:xzddf@duck.com', show: false },
     
