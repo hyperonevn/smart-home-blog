@@ -3,7 +3,7 @@ const BLOG = {
   author: 'xzddf',
   email: 'xzddf@duck.com',
   link: 'https://xzddf.com',
-  description: '分享有价值的内容，消除信息差',
+  description: '分享干货内容，消除信息差',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   timezone: 'Asia/Shanghai', // Your Notion posts' date will be interpreted as this timezone. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for all options.
   appearance: 'dark', // ['light', 'dark', 'auto'],
