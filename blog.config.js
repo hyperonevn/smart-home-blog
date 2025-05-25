@@ -18,7 +18,7 @@ const BLOG = {
   showArchive: false,
   autoCollapsedNavBar: false, // The automatically collapsed navigation bar
   ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // The link to generate OG image, don't end with a slash
-  socialLink: 'https://x.com/xzddfcom',
+  socialLink: 'https://x.com/laozeieth',
   seo: {
     keywords: ['xzddf', '写字的地方', 'xzddfcom'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
