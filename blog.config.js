@@ -1,6 +1,6 @@
 const BLOG = {
   title: '写字的地方✍️',
-  author: 'xzddf',
+  author: '老贼',
   email: 'xzddf@duck.com',
   link: 'https://xzddf.com',
   description: '分享干货内容，消除信息差',
