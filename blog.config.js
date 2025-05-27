@@ -1,7 +1,7 @@
 const BLOG = {
   title: '写字的地方✍️',
   author: '老贼',
-  email: 'xzddf@duck.com',
+  email: 'laozei@duck.com',
   link: 'https://xzddf.com',
   description: '分享干货内容，消除信息差',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
