@@ -18,7 +18,7 @@ const BLOG = {
   showArchive: false,
   autoCollapsedNavBar: false, // The automatically collapsed navigation bar
   ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // The link to generate OG image, don't end with a slash
-  socialLink: 'https://x.com/laozeieth',
+  socialLink: 'https://x.com/laozeixyz',
   seo: {
     keywords: ['web3', '区块链', '加密货币', '比特币', '去中心化金融', 'AI', 'DeFi', 'NFT', '智能合约', '交易所', '以太坊', '海外开户', '数字游民', '远程工作', '如何成为数字游民', 'remote', '人工智能', '工具', '信息差', '玩卡', '信用卡', '银行卡', '外币卡', '数字银行', '银行', '链游'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
