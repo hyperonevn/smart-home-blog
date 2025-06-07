@@ -15,8 +15,7 @@ const NavBar = () => {
     { id: 3, name:'联系', to: 'https://linktr.ee/laozei', show: false },
     
     { id: 4, name: locale.NAV.RSS, to: '/feed', show: false, external: true },
-    { id: 5, name:'搜索', to: '/search', show: true }
-    //{ id: 5, name: locale.NAV.SEARCH, to: '/search', show: true }
+    { id: 5, name: locale.NAV.SEARCH, to: '/search', show: true }
   ]
   return (
     <div className="flex-shrink-0">
