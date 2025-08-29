@@ -47,6 +47,9 @@ const BLOG = {
       clientSecret: '',
       distractionFreeMode: false
     },
+    utterancesConfig: {
+      repo: ''
+    },
     cusdisConfig: {
       appId: '', // data-app-id
       host: 'https://cusdis.com', // data-host, change this if you're using self-hosted version
