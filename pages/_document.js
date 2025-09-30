@@ -115,10 +115,28 @@ class MyDocument extends Document {
             }
           `}
           </style>
+          <link rel="stylesheet" href="https://laozeiblog-nlweb.zaire.workers.dev/nlweb-dropdown-chat.css" />
+          <link rel="stylesheet" href="https://laozeiblog-nlweb.zaire.workers.dev/common-chat-styles.css" />
         </Head>
         <body className="bg-day dark:bg-night">
+          <div id="docs-search-container"></div>
           <Main />
           <NextScript />
+          <script
+            type="module"
+            dangerouslySetInnerHTML={{
+              __html: `
+            import { NLWebDropdownChat } from 'https://laozeiblog-nlweb.zaire.workers.dev/nlweb-dropdown-chat.js';
+
+            const chat = new NLWebDropdownChat({
+              containerId: 'docs-search-container',
+              site: 'https://laozeiblog-nlweb.zaire.workers.dev',
+              placeholder: 'Search for docs...',
+              endpoint: 'https://laozeiblog-nlweb.zaire.workers.dev'
+            });
+          `
+            }}
+          />
         </body>
       </Html>
     )

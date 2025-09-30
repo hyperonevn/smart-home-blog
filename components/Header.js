@@ -9,10 +9,13 @@ const NavBar = () => {
   const BLOG = useConfig()
   const locale = useLocale()
   const links = [
-    { id: 0, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
-    { id: 1, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
-    { id: 2, name: locale.NAV.RSS, to: '/feed', show: true, external: true },
-    { id: 3, name: locale.NAV.SEARCH, to: '/search', show: true }
+    { id: 0, name:'YouTube', to: 'https://youtube.com/@laozei', show: false },
+    { id: 1, name:'𝕏: @laozeixyz', to: 'https://x.com/laozeixyz', show: true },
+    { id: 2, name:'频道', to: 'https://t.me/laozei_xyz', show: false },
+    { id: 3, name:'联系', to: 'https://linktr.ee/laozei', show: false },
+    
+    { id: 4, name: locale.NAV.RSS, to: '/feed', show: false, external: true },
+    { id: 5, name: locale.NAV.SEARCH, to: '/search', show: true }
   ]
   return (
     <div className="flex-shrink-0">
