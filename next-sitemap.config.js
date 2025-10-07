@@ -1,10 +1,16 @@
-const { config }  = require('./lib/server/config')
+const { config } = require('./lib/server/config')
 
 module.exports = {
-  siteUrl: config.link,
+  siteUrl: config.link || 'https://blog.hyperonevn.com',
   generateRobotsTxt: true,
   sitemapSize: 7000,
-  generateIndexSitemap: false
-  // ...other options
-  // https://github.com/iamvishnusankar/next-sitemap#configuration-options
+  generateIndexSitemap: false,
+  changefreq: 'weekly',
+  priority: 0.7,
+  robotsTxtOptions: {
+    policies: [
+      { userAgent: '*', allow: '/' },
+      { userAgent: 'GPTBot', disallow: ['/'] }
+    ]
+  }
 }
